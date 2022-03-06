@@ -135,7 +135,7 @@ p {
     width: 95vw;
   }
 }
-/* 以下程式碼和第 258 行可讓圖片和 title 置中當中螢幕時 */
+
 @media screen and (max-width: 991px) {
   .section-title {
     text-align: center;
