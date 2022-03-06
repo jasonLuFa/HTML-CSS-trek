@@ -1,6 +1,6 @@
 # Crazy Steak Project
 ## 目的
-  * First HTML & CSS project
+  * First HTML & CSS project ( 單純畫面呈現，未做畫面跳轉 )
 ## 技術細節
   - *postion*
     - fixed 
