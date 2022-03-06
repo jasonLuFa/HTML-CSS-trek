@@ -1,6 +1,8 @@
 # Crazy Steak Project
 ## 目的
   * First HTML & CSS project ( 單純畫面呈現，未做畫面跳轉 )
+  * [成品]( https://crazy-steak.netlify.app/ )
+
 ## 技術細節
   - *postion*
     - fixed 
