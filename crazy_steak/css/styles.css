@@ -446,6 +446,9 @@ Products
   height: 17rem;
   object-fit: cover;
 }
+.product-star span {
+  margin-right: 20rem;
+}
 
 .product {
   /* margin: 0 auto;
@@ -581,6 +584,10 @@ Contact
   color: var(--clr-primary);
   font-weight: 400;
 }
+.contact-text {
+  font-family: var(--ff-text);
+  text-transform: none;
+}
 .contact-form {
   background: var(--clr-white);
   border-radius: var(--radius);
@@ -596,9 +603,6 @@ Contact
 .contact h3 {
   padding-top: 1.25rem;
   color: var(--clr-grey-5);
-}
-.contact-text {
-  font-family: var(--ff-text);
 }
 .form-group {
   padding: 1rem 1.5rem;
