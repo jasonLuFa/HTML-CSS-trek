@@ -3,6 +3,7 @@
   * improve my first HTML & CSS project ( 單純一頁式畫面呈現，未做多頁畫面跳轉 )
   * 基於上一個專案，將所有用 float 的排版變 flexbox ，並修改一些畫面
   * 優化 navbar 的 RWD 
+  * [成品]( https://crazy-steak-flexbox-practice.netlify.app/ )
 ## 技術細節
   - *flexbox*
     - flex container
