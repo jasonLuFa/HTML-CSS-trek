@@ -23,6 +23,7 @@
     - media query
   - *other*
     - font、color、backgroun、image、 box model ......
+    - 一些小圖片來自 [fontawesome]( https://fontawesome.com/ )
 ## 作法
  ### crazy steak html structure :<br>
    ![crazy steak html structure](./crazy_steak_html_structure.png)
