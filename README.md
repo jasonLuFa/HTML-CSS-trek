@@ -4,6 +4,8 @@
 ## Project list
 1. [Crazy Steak website][1]
 2. [Crazy Steak website_2.0 (practice flex)][2]
+3. [grid basic layout practice][3]
 
 [1]: https://github.com/jasonLuFa/HTML-CSSTrek/tree/main/crazy_steak
 [2]: https://github.com/jasonLuFa/HTML-CSSTrek/tree/main/crazy_steak_2.0
+[3]:
