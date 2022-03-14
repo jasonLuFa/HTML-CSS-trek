@@ -1,32 +1,14 @@
 # Crazy Steak Project
 ## 目的
-  * First HTML & CSS project ( 單純畫面呈現，未做畫面跳轉 )
+  * improve my first HTML & CSS project ( 單純一頁式畫面呈現，未做多頁畫面跳轉 )
+  * 基於上一個專案，將所有用 float 的排版變 flexbox ，並修改一些畫面
+  * 優化 navbar 的 RWD 
 ## 技術細節
-  - *postion*
-    - fixed 
-    - relative
-    - absolute
-    - z-index
-  - *display & float*
-    - block
-    - inline
-    - inline-block
-  - *Animation*
-    - transition
-    - transform
-    - w/keyframes
-  - *Unit*
-    - rem, vh, vw, %, px,
-  - *RWD*
-    - media query
-  - *other*
-    - font、color、backgroun、image、 box model ......
-## 作法
- ### crazy steak html structure :<br>
-   ![crazy steak html structure](./crazy_steak_html_structure.png)
+  - *flexbox*
+    - flex container
+    - flex items
 
 ## 筆記
-  1. 定義出會被重複用到的 property value 到 `:root{}` 裡，以及思考哪些樣式會重複用到( 例如:`body{}`, `p{}`, `.section-title{}`...... )
-  2. RWD 方面
-     * 通常先從螢幕最小到大來設計( breakpoints : 576px, 768px, 992px, 1200px )
-     * `.section-center` 目的就是為了避免超過 1200px 的超大螢幕，導致畫面分散
+  - flex 排版方式 :
+    * 先在 item container 設定 display: flex
+    * 在設定 flex items，例如 `flex : 0 0 calc(25% - 1rem )` 的形式，代表不會因螢幕大小縮放空間，且 `calc()` 裡的 25% 代表 flex 裡的 items 分四區塊，1rem 是 flex items 間的間隔，在搭配 flex container 的 justify-content 去設定 flex items 間隔設定
