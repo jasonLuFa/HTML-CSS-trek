@@ -83,6 +83,7 @@ Main navbar
   background: var(--darkGrey);
 }
 .nav-center {
+  width: 100%;
   max-width: 1700px;
   margin: 0 auto;
 }
@@ -119,9 +120,9 @@ Main navbar
   transition: var(--transition);
 }
 .showNav {
-  height: 120px;
+  height: 160px;
 }
-@media screen and (min-width: 768px) {
+@media screen and (min-width: 992px) {
   .nav-toggle {
     display: none;
   }
@@ -165,4 +166,66 @@ Hero
   max-width: 35rem;
   margin: 0 auto;
   color: var(--offWhite);
+}
+/* 
+============
+Cards
+============
+*/
+.title {
+  text-align: center;
+}
+.cards {
+  padding: 4rem 0;
+}
+.cards-center {
+  width: 80vw;
+  max-width: 1170px;
+  margin: 2rem auto;
+  /* 可替代以下 media query */
+  display: grid;
+  column-gap: 2rem;
+  /* three columns layout */
+  grid-template-columns: repeat(
+    auto-fill,
+    minmax(calc((1170px - 2rem * 2) / 3), 1fr)
+  );
+  /* four columns layout */
+  /* grid-template-columns: repeat(
+    auto-fill,
+    minmax(calc((1170px - 2rem * 3) / 4), 1fr)
+  ); */
+}
+/* @media screen and (min-width: 768px) {
+  .cards-center {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    column-gap: 2rem;
+  }
+}
+@media screen and (min-width: 1170px) {
+  .cards-center {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+} */
+.card {
+  border: 1px solid var(--darkGrey);
+  margin-bottom: 3rem;
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: auto 1fr auto;
+}
+.card-info {
+  padding: 1rem;
+}
+.card-footer {
+  background: var(--darkGrey);
+  padding: 0.5rem 1rem;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  justify-items: center;
+}
+.card-footer span {
+  color: var(--primaryColor);
 }
