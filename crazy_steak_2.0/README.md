@@ -8,6 +8,9 @@
   - *flexbox*
     - flex container
     - flex items
+  - *browser prefix*
+    - 用 vscode 套件 (Autoprefixer-v3.0.0) 
+    - 全選所有 css code 後，`Ctrl+Shift+P` 開啟 Command Palette 選 Autoprefixer. Run
 
 ## 筆記
   - flex 排版方式 :
