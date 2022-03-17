@@ -1,0 +1,168 @@
+/* 
+============
+Global Styles
+============
+*/
+:root {
+  --primaryColor: #f15025;
+  --mainBlack: #222;
+  --mainWhite: #fff;
+  --offWhite: #f7f7f7;
+  --darkGrey: #afafaf;
+  --mainTransition: all 0.3s linear;
+  --mainSpacing: 0.2rem;
+  --transition: all 0.3s linear;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  font-family: "Open Sans", sans-serif;
+  color: var(--mainBlack);
+  background: var(--mainWhite);
+  line-height: 1.5;
+}
+a {
+  text-decoration: none;
+}
+
+img {
+  width: 100%;
+  display: block;
+}
+
+h1,
+h2,
+h3 {
+  text-transform: capitalize;
+  letter-spacing: var(--mainSpacing);
+  margin-bottom: 1.25rem;
+}
+h1 {
+  font-size: 3rem;
+}
+h2 {
+  margin-bottom: 0;
+}
+p {
+  font-weight: 300;
+  font-size: 0.7rem;
+  line-height: 2;
+}
+
+/* button */
+.btn {
+  display: inline-block;
+
+  padding: 0.5rem 1rem;
+  margin: 3rem;
+  border: 3px solid var(--primaryColor);
+
+  text-transform: capitalize;
+  color: var(--primaryColor);
+
+  transition: var(--mainTransition);
+}
+.btn:hover {
+  background: var(--primaryColor);
+  color: var(--mainWhite);
+}
+/* 
+============
+Main navbar
+============
+*/
+.navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background: var(--darkGrey);
+}
+.nav-center {
+  max-width: 1700px;
+  margin: 0 auto;
+}
+.nav-header {
+  display: flex;
+  justify-content: space-between;
+  padding: 0.5rem 2rem;
+}
+.nav-logo {
+  font-size: 1.5rem;
+}
+.nav-toggle {
+  border: transparent;
+  background: transparent;
+  font-size: 1.5rem;
+  cursor: pointer;
+}
+.nav-link {
+  display: block;
+  padding: 0.5rem 1rem;
+  font-weight: 800;
+  text-transform: capitalize;
+  color: var(--primaryColor);
+  transition: var(--transition);
+}
+.nav-link:hover {
+  color: var(--offWhite);
+  background: var(--primaryColor);
+}
+.nav-links {
+  height: 0;
+  overflow: hidden;
+  list-style: none;
+  transition: var(--transition);
+}
+.showNav {
+  height: 120px;
+}
+@media screen and (min-width: 768px) {
+  .nav-toggle {
+    display: none;
+  }
+  .nav-center {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .nav-links {
+    display: flex;
+    justify-content: space-between;
+    height: auto;
+    margin-right: 4rem;
+  }
+  .nav-link {
+    font-size: 1.5rem;
+  }
+}
+/* 
+============
+Hero
+============
+*/
+.hero {
+  display: grid;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(105, 161, 230, 0.6)),
+    url(./images/image-3.jpeg) center/cover no-repeat fixed;
+}
+
+.hero-banner {
+  margin: 0 auto;
+  text-align: center;
+}
+.hero-banner h1 {
+  color: var(--mainWhite);
+}
+.hero-banner p {
+  max-width: 35rem;
+  margin: 0 auto;
+  color: var(--offWhite);
+}
