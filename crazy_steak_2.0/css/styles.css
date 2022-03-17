@@ -358,7 +358,7 @@ NavBar
 .showNav {
   height: 227.08px;
 }
-/* media query 大螢幕時修改地方 max-width: 0px; */
+
 @media screen and (min-width: 992px) {
   .navbar {
     background: rgba(116, 69, 40);
