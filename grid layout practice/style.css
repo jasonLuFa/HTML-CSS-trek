@@ -70,6 +70,9 @@ p {
   background: var(--primaryColor);
   color: var(--mainWhite);
 }
+.title {
+  text-align: center;
+}
 /* 
 ============
 Main navbar
@@ -152,7 +155,7 @@ Hero
   align-items: center;
   min-height: 100vh;
   background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(105, 161, 230, 0.6)),
-    url(./images/image-3.jpeg) center/cover no-repeat fixed;
+    url(./images/image-3.jpeg) center/cover fixed no-repeat;
 }
 
 .hero-banner {
@@ -172,9 +175,7 @@ Hero
 Cards
 ============
 */
-.title {
-  text-align: center;
-}
+
 .cards {
   padding: 4rem 0;
 }
@@ -212,6 +213,7 @@ Cards
 .card {
   border: 1px solid var(--darkGrey);
   margin-bottom: 3rem;
+  /* 為了避免每張卡片的文字數量不一樣 */
   display: grid;
   grid-template-columns: 1fr;
   grid-template-rows: auto 1fr auto;
@@ -229,3 +231,211 @@ Cards
 .card-footer span {
   color: var(--primaryColor);
 }
+/* 
+============
+Gallery
+============
+*/
+.gallery {
+  padding: 4rem 0;
+}
+.gallery-center {
+  width: 90vw;
+  max-width: 1170px;
+  margin: 2rem auto;
+  display: grid;
+  gap: 2rem 2rem;
+}
+@media screen and (min-width: 768px) {
+  .gallery-center {
+    grid-template-columns: repeat(2, 2fr);
+  }
+}
+@media screen and (min-width: 992px) {
+  .gallery-center {
+    grid-template-columns: repeat(3, 3fr);
+  }
+}
+@media screen and (min-width: 1170px) {
+  .gallery-center {
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(5, 200px);
+    grid-template-areas:
+      "a a a b"
+      "a a a c"
+      "d d d d"
+      "e f f f"
+      "e g h i";
+  }
+  .gallery img {
+    height: 100%;
+    object-fit: cover;
+  }
+  .gallery-picture-1 {
+    grid-area: a;
+  }
+  .gallery-picture-2 {
+    grid-area: b;
+  }
+  .gallery-picture-3 {
+    grid-area: c;
+  }
+  .gallery-picture-4 {
+    grid-area: d;
+  }
+  .gallery-picture-5 {
+    grid-area: e;
+  }
+  .gallery-picture-6 {
+    grid-area: f;
+  }
+  .gallery-picture-7 {
+    grid-area: g;
+  }
+  .gallery-picture-8 {
+    grid-area: h;
+  }
+  .gallery-picture-9 {
+    grid-area: i;
+  }
+}
+/* 
+============
+Layout
+============
+*/
+.header {
+  background: var(--primaryColor);
+  color: var(--mainWhite);
+  padding: 0.5rem 0;
+  text-align: center;
+}
+.nav {
+  background: var(--darkGrey);
+}
+.nav li {
+  list-style-type: none;
+}
+.nav a {
+  padding: 1rem;
+  display: block;
+  text-transform: capitalize;
+  letter-spacing: var(--mainSpacing);
+  font-size: 1.2rem;
+  color: var(--mainBlack);
+  transition: var(--transition);
+}
+.nav a:hover {
+  color: var(--offWhite);
+}
+.content {
+  padding: 2rem;
+}
+.content p {
+  font-size: 1rem;
+}
+.sidebar {
+  background: var(--primaryColor);
+  padding: 1rem 0;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  justify-items: center;
+  color: var(--mainWhite);
+  font-size: 1.2rem;
+}
+.footer {
+  background: var(--mainBlack);
+  padding: 0.5rem 0;
+  color: var(--mainWhite);
+  text-align: center;
+  text-transform: capitalize;
+}
+.footer p {
+  font-size: 1.2rem;
+}
+.main {
+  min-height: 100vh;
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: auto auto 1fr auto auto;
+}
+@media screen and (min-width: 768px) {
+  .nav ul {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    justify-items: center;
+  }
+}
+/* 可用以下 grid-template-areas 和 grid-area 方式 */
+@media screen and (min-width: 992px) {
+  .main {
+    display: grid;
+    grid-template-columns: [start] 200px [col-1-end]1fr[col-2-end] 50px [end];
+    grid-template-rows: [start]auto[row-1-end] 1fr [row-2-end] auto [end];
+  }
+  .header {
+    grid-row: start/row-1-end;
+    grid-column: start/end;
+  }
+  .nav {
+    grid-row: row-1-end/row-2-end;
+    grid-column: start/col-1-end;
+  }
+  .content {
+    grid-row: row-1-end/row-2-end;
+    grid-column: col-1-end/col-2-end;
+  }
+  .sidebar {
+    grid-row: row-1-end/row-2-end;
+    grid-column: col-2-end/end;
+  }
+  .footer {
+    grid-area: row-2-end/start/end/end;
+  }
+  .nav ul {
+    grid-template-columns: 1fr;
+    align-items: center;
+    min-height: 100%;
+  }
+  .sidebar {
+    background: var(--darkGrey);
+    grid-template-columns: 1fr;
+    align-items: center;
+  }
+}
+/* @media screen and (min-width: 992px) {
+  .main {
+    display: grid;
+    grid-template-columns: [start] 200px [col-1-end]1fr[col-2-end] 50px [end];
+    grid-template-rows: [start]auto[row-1-end] 1fr [row-2-end] auto [end];
+    grid-template-areas:
+      "a a a"
+      "b c d"
+      "e e e";
+  }
+  .header {
+    grid-area: a;
+  }
+  .nav {
+    grid-area: b;
+  }
+  .content {
+    grid-area: c;
+  }
+  .sidebar {
+    grid-area: d;
+  }
+  .footer {
+    grid-area: e;
+  }
+  .nav ul {
+    grid-template-columns: 1fr;
+    align-items: center;
+    min-height: 100%;
+  }
+  .sidebar {
+    background: var(--darkGrey);
+    grid-template-columns: 1fr;
+    align-items: center;
+  }
+} */
