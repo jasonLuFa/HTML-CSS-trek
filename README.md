@@ -9,3 +9,8 @@
 [1]: https://github.com/jasonLuFa/HTML-CSSTrek/tree/main/crazy_steak
 [2]: https://github.com/jasonLuFa/HTML-CSSTrek/tree/main/crazy_steak_2.0
 [3]: https://github.com/jasonLuFa/HTML-CSSTrek/tree/main/grid%20layout%20practice
+
+## 其他
+- 免費練習 grid 和 flex 的有趣網站
+   - [Grid Attack & Flex Box Adventure](https://codingfantasy.com/)
+   - [Flexbox Zombies](https://mastery.games/flexboxzombies/)
